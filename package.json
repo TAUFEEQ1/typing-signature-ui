@@ -1,0 +1,25 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "description": "Typing Auth",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack",
+    "serve": "npx webpack-dev-server"
+  },
+  "author": "Nsamba Taufeeq",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv-webpack": "^8.0.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.1"
+  },
+  "dependencies": {
+    "jquery": "^3.6.1",
+    "path-browserify": "^1.0.1",
+    "rxjs": "^7.5.6",
+    "silkrouter": "^4.2.13"
+  }
+}

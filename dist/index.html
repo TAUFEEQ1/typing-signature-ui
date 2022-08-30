@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Test Login</title>
+</head>
+
+<body>
+    <main class="d-flex align-items-center justify-content-center">
+        <div class="card text-light card-styling">
+            <div class="card-body">
+                <div class="card-title">
+                    <h2 class="text-center mt-2">Typing Demo</h2>
+                </div>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label class="my-1">Username</label>
+                        <input class="form-control form-field" type="text" name="username" required>
+                    </div>
+                    <div class="form-group my-3">
+                        <label class="my-1">Password</label>
+                        <input class="form-control form-field" type="password" name="password" required data-confidential='true'>
+                    </div>
+                    <div class="d-flex justify-space-between">
+                        <button class="btn btn-primary mt-1 mr-1 col-7" type="submit">
+                            <span data-content="submit-text">Sign In</span>
+                        </button>
+                        <div class="col-1"></div>
+                        <button class="btn btn-outline-light mt-1" onclick="toRegister()" type="button">
+                            Register
+                        </button>
+                    </div>
+
+                </form>
+                <form id="secret-qn" style="display:none;">
+                    <div class="form-group">
+                        <h6>Security Qn</h6>
+                        <label class="my-1"> What is the name of your first pet?</label>
+                        <input type="text" class="form-control form-field" required data-confidential='true' name="petname">
+                    </div>
+                    <input type="hidden" id="token">
+                    <button class="btn btn-primary form-control mt-1" type="submit">
+                        <span data-content="submit-text">Answer</span>
+                    </button>
+                </form>
+                <div class="jumbotron" id="success-lgn" style="display:none;">
+                    <h1 id="welcome" class="text-capitalize"> Welcome, unknown</h1>
+                    <button class="btn btn-danger w-100" onclick="toLogOut()">SIGN OUT</button>
+                </div>
+                <form id="register" style="display:none;">
+                    <div class="form-group">
+                        <label class="my-1">Username</label>
+                        <input class="form-control form-field" type="text" required autocomplete="off" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label class="my-1">Name of first pet</label>
+                        <input class="form-control form-field" type="text" required autocomplete="off" name="petname">
+                    </div>
+                    <div class="form-group my-3">
+                        <label class="my-1">Password</label>
+                        <input class="form-control form-field" type="password" required autocomplete="off" name="password" data-confidential='true'>
+                    </div>
+                    <div class="form-group my-3">
+                        <label class="my-1">Confirm Password</label>
+                        <input class="form-control form-field" type="password" required autocomplete="off" name="confirmpassword">
+                    </div>
+                    <button class="btn btn-primary mt-1 mr-1 form-control" type="submit">
+                        <span data-content="submit-text">Sign Up</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+<style>
+    body {
+        background-image: url('https://picsum.photos/id/237/536/354');
+        background-size: cover;
+    }
+
+    .card-styling {
+        width: 20em;
+        background: transparent;
+        border-color: rgba(140, 140, 140, 0.2);
+    }
+
+    .form-field {
+        background-color: rgba(0, 0, 0, 0.90);
+        border-color: rgba(140, 140, 140, 0.8);
+        color: white;
+    }
+
+    .form-field:focus {
+        background-color: rgba(0, 0, 0, 0.90);
+        border-color: transparent;
+        color: white;
+    }
+
+    .loading:after {
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: bottom;
+        animation: ellipsis 2s infinite;
+        content: "\2026";
+        /* ascii code for the ellipsis character */
+    }
+
+    @keyframes ellipsis {
+        from {
+            width: 2px;
+        }
+
+        to {
+            width: 15px;
+        }
+    }
+
+    main {
+        background-color: rgba(0, 0, 0, 0.50);
+
+        height: 100vh;
+        width: 100vw;
+    }
+</style>
+<script src="./bundle.js"></script>
+
+</html>
