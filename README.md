@@ -1,4 +1,4 @@
-# typing-signature-ui
+# Typing Signature UI
 
 This is  a hobby project to recognise users through their typing signature.
 
